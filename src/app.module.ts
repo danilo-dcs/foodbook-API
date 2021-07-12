@@ -11,11 +11,11 @@ import { FoodModule } from './food/food.module';
 
     TypeOrmModule.forRoot({
       type: 'postgres',
-      host: process.env.HOST,
-      port: parseInt(<string>process.env.PORT),
-      username: process.env.USER,
-      password: process.env.PASSWORD,
-      database: process.env.DATABASE,
+      host: process.env.DATABASE_HOST,
+      port: parseInt(<string>process.env.DATABASE_PORT),
+      database: process.env.DATABASE_NAME,
+      username: process.env.DATABASE_USERNAME,
+      password: process.env.DATABASE_PASSWORD,
       autoLoadEntities: true,
       synchronize: true
     }),
